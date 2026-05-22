@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+/* Custom tech design accents and smooth scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2D;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A267;
+}
+
+.glow-toggle-on {
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.45);
+}
+
+.glow-toggle-off {
+  box-shadow: 0 0 20px rgba(110, 110, 115, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px rgba(197, 162, 103, 0.25);
+}
+
+@keyframes pulse-blink {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.animate-pulse-blink {
+  animation: pulse-blink 2s infinite ease-in-out;
+}

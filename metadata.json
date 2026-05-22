@@ -1,0 +1,10 @@
+{
+  "name": "JARVIOS",
+  "description": "Desktop-first bidirectional voice assistant with real-time stream, live abstract motherboard visualizer, and custom assistant tools.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
