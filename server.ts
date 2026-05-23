@@ -9,8 +9,10 @@ import dotenv from "dotenv";
 // Load environment variables
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Safe fallback utility for ES Modules and CommonJS
+const isESM = typeof import.meta !== "undefined" && import.meta.url;
+const filenameVal = isESM ? fileURLToPath(import.meta.url) : (typeof __filename !== "undefined" ? __filename : __filename);
+const dirnameVal = isESM ? path.dirname(filenameVal) : (typeof __dirname !== "undefined" ? __dirname : __dirname);
 
 const app = express();
 const PORT = 3000;
